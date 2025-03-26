@@ -1,0 +1,52 @@
+resolution: 0.5
+# ensure a decending order of pressure levels
+pressure_levels: [1, 5, 7, 10, 20, 30, 50, 70, 100, 125, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 825, 850, 875, 900, 925, 950, 975, 1000]
+
+
+# interval should be a 1
+interval: 1
+start_date: 1979-01-01
+end_date: 2018-12-31
+pressure_variables:
+  - name: z
+    long_name: geopotential
+    param_id: 129
+  - name: q
+    long_name: specific_humidity
+    param_id: 133
+  - name: t
+    long_name: temperature
+    param_id: 130
+  - name: u
+    long_name: u_component_of_wind
+    param_id: 131
+  - name: v
+    long_name: v_component_of_wind
+    param_id: 132
+  - name: w
+    long_name: vertical_velocity
+    param_id: 135
+surface_variables:
+  - name: u10
+    long_name: 10m_u_component_of_wind
+    param_id: 165
+  - name: v10
+    long_name: 10m_v_component_of_wind
+    param_id: 166
+  - name: t2m
+    long_name: 2m_temperature
+    param_id: 167
+  - name: z
+    long_name: geopotential
+    param_id: 129
+  - name: lsm
+    long_name: land_sea_mask
+    param_id: 172
+  - name: msl
+    long_name: mean_sea_level_pressure
+    param_id: 151
+  - name: tisr
+    long_name: toa_incident_solar_radiation
+    param_id: 163
+
+
