@@ -174,9 +174,6 @@ class ERA5Stats:
         return data
 
 
-# the dataset should be in netcdf4 format
-
-# TODO: now the one day of data contains 24 data points, change is required if the interval is not 1 hour
 # assuming zarr
 # Notice that data is arranged in the following way:
 # longitude: 0.0, 0.25, 0.5, 0.75, 1.0, ..., 359.75
@@ -619,7 +616,7 @@ class ERA5Dataset(Dataset):
             surface_dataset = self.surface_datasets[year]
             for _, idx in enumerate(idxes_to_sample[year]):
                 tisr = self.__sample_single_step(
-                    idx, i, data, pressure_dataset, surface_dataset)
+                    idx, store_idx, data, pressure_dataset, surface_dataset)
                 forcing[store_idx, :, :, :] = self.__build_forcing(year, idx, tisr)
                 store_idx += 1
         return data, forcing
